@@ -12,13 +12,13 @@ function TopNews(props) {
 	}
 
 	return(<div class="col-md-4 continent">
-      <h3>{country[rand]} </h3>
+      <h3>{country[rand]}</h3>
 		<div>
 		<img src={imgurl} alt='no image' />
 		<div className='news-header'>
 		<h4><Link onClick={handleclick}>{title} </Link></h4></div>
 		<div className='news-body'><h3>{description}</h3></div>
-		<div className='news-body'><h3>In its 2latest lurch to the far right, Denmark plans to send some refugees back to Syria</h3></div>
+		<div className='news-body'><h3>In its 2latest nnn d dndjdn lurch to the far right, Denmark plans to send some refugees back to Syria</h3></div>
 
 		</div>
     </div>)

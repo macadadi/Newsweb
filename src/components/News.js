@@ -14,14 +14,8 @@ const {country,isloading,news,checkdata}= useNews()
   <div class="row rowdiv">
   {!news ? 'loadibg ' : news.map((t,index)=>t?.image && <Topnews country={country} id={index} 
   key={index} title={t.title} description={checkdata( t.description,60)} imgurl={t.image}/>)}
-
-
-
+  
    </div> 
-
-
-
-
      <div class="row rowdiv">
     <div class="col-md-3 news-highlite">
  <h3> More News </h3>

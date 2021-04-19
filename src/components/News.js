@@ -8,12 +8,12 @@ import {useNews} from '../context/NewsContext'
 
 function News(argument) {
 const {country,isloading,news,checkdata}= useNews()
-	return(<div>
-		<div class="container">
-	
+  return(<div>
+    <div class="container">
+  
   <div class="row rowdiv">
   {!news ? 'loadibg ' : news.map((t,index)=>t?.image && <Topnews country={country} id={index} 
-	key={index} title={t.title} description={checkdata( t.description,60)} imgurl={t.image}/>)}
+  key={index} title={t.title} description={checkdata( t.description,60)} imgurl={t.image}/>)}
 
 
 
@@ -34,7 +34,7 @@ const {country,isloading,news,checkdata}= useNews()
 
     <div class="row rowdiv">
   {!news ? 'loadibg ' : news.map((t,index)=>t?.image && <MoreStories country={country} id={index} 
-	key={index} title={t.title} description={checkdata( t.description,60)} imgurl={t.image}/>)}
+  key={index} title={t.title} description={checkdata( t.description,60)} imgurl={t.image}/>)}
 
 
 
@@ -51,7 +51,7 @@ const {country,isloading,news,checkdata}= useNews()
 
     <div class="row rowdiv">
   {!news ? 'loadibg ' : news.map((t,index)=>t?.image && <FeaturedStories country={country} id={index} 
-	key={index} title={t.title} description={checkdata( t.description,60)} imgurl={t.image}/>)}
+  key={index} title={t.title} description={checkdata( t.description,60)} imgurl={t.image}/>)}
 
 
 

@@ -15,9 +15,7 @@ function FeaturedStories(props) {
 		<div>
 		<img src={imgurl} alt='no image' />
 		<div className='news-header'>
-		<Link to='#' onClick={handleclick}><h4>{title}</h4></Link></div>
-		<div className='news-body'><h3>In its1 latest lurch to the far right, Denmark plans to send some refugees back to Syria</h3></div>
-		
+		<Link to='#' onClick={handleclick}><h4>{title}</h4></Link></div>	
 		</div>
     </div>
 		)

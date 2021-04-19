@@ -12,7 +12,7 @@ function TopNews(props) {
 	}
 
 	return(<div class="col-md-4 continent">
-      <h3>{country[rand]} {id}</h3>
+      <h3>{country[rand]} </h3>
 		<div>
 		<img src={imgurl} alt='no image' />
 		<div className='news-header'>

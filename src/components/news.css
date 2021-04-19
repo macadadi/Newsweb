@@ -1,15 +1,25 @@
 img{
-	width: 99%;
+	width: 90%;
 	object-fit: contain;
+  height: 30vh
 }
 .continent{
 	background-color:white; 
   flex-wrap: wrap;
+ height: 70vh;
+
 
 }
 .container{
 	padding-bottom: 40px;
 	
+}
+.news-highlite >h3{
+  color: black;
+  font-weight: bold;
+  font:italic;
+  font-size: 30px;
+  overflow: hidden;
 }
 .news-header > h4{
 	color: black;
@@ -20,7 +30,6 @@ img{
 }
 .news-header > h4:hover{
 	cursor: pointer;
-	font-size: 30px;
 	color: red;
 }
 .news-body{

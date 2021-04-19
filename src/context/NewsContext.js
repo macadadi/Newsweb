@@ -23,7 +23,7 @@ export function NewsProvider({children}){
        
    useEffect(()=>{
    	         setIsloading(true)
-             fetch(`http://api.mediastack3.com/v1/news?access_key=${ur}&languages=en`)
+             fetch(`http://api.mediastack.com/v1/news?access_key=${ur}&languages=en`)
             .then(response => response.json())
             .then(data => {setNews(data.data)
             	setIsloading(false)}).catch(err=>console.log(err));

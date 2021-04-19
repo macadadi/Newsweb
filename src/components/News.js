@@ -12,9 +12,9 @@ const {country,isloading,news,checkdata}= useNews()
     <div class="container">
   
   <div class="row rowdiv">
-  {!news ? 'loadibg ' : news.map((t,index)=>t?.image && <Topnews country={country} id={index} 
+  {!news ? 'loading ' : news.map((t,index)=>t?.image && <Topnews country={country} id={index} 
   key={index} title={t.title} description={checkdata( t.description,60)} imgurl={t.image}/>)}
-  
+
    </div> 
      <div class="row rowdiv">
     <div class="col-md-3 news-highlite">
@@ -23,11 +23,11 @@ const {country,isloading,news,checkdata}= useNews()
     <div className="col-md-9 empty-div">
     </div>
   </div>
-  .............................................
+ 
 
 
     <div class="row rowdiv">
-  {!news ? 'loadibg ' : news.map((t,index)=>t?.image && <MoreStories country={country} id={index} 
+  {!news ? 'loading' : news.map((t,index)=>t?.image && <MoreStories country={country} id={index} 
   key={index} title={t.title} description={checkdata( t.description,60)} imgurl={t.image}/>)}
 
 
@@ -41,10 +41,10 @@ const {country,isloading,news,checkdata}= useNews()
     <div className="col-md-9 empty-div">
     </div>
   </div>
-  .............................................
+
 
     <div class="row rowdiv">
-  {!news ? 'loadibg ' : news.map((t,index)=>t?.image && <FeaturedStories country={country} id={index} 
+  {!news ? 'loading ' : news.map((t,index)=>t?.image && <FeaturedStories country={country} id={index} 
   key={index} title={t.title} description={checkdata( t.description,60)} imgurl={t.image}/>)}
 
 

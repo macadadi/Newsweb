@@ -1,0 +1,46 @@
+.Nav-div{
+	height: 25vh;
+	background-color: black;
+	position: sticky;
+	top: -70px;
+	
+	
+}
+.navbar{
+  position: sticky;
+  position: -webkit-sticky;
+  background: #f83d23;
+ 
+  top: 0px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 6px #000;
+  color: #fff;
+
+}
+.nav-sub{
+	text-align: center;
+	 font-family: "Times New Roman", Times, serif;
+	font-size: 80px;
+	color: red;
+   justify-content: center;
+  align-items: center;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .nav-sub{
+    font-size: 50px;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    z-index: -1;
+    padding-left: 10px;
+    justify-content: center;
+  align-items: center;
+
+
+  }
+}
+

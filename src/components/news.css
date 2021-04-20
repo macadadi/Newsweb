@@ -1,12 +1,12 @@
 img{
 	width: 90%;
 	object-fit: contain;
-  height: 30vh
+  
 }
 .continent{
 	background-color:white; 
   flex-wrap: wrap;
- height: 70vh;
+ 
 
 
 }
@@ -24,6 +24,7 @@ img{
 .news-header > h4{
 	color: black;
 	font-weight: bold;
+
 	font:italic;
 	font-size: 17px;
 	overflow: hidden;
@@ -119,4 +120,26 @@ border-bottom:3px solid;
     box-shadow: 0 -2em;
     height: 5em;
   }
+}
+
+
+
+.handlebtn{
+  outline: none;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+}
+
+
+.link{
+   text-decoration-line: none;
+}
+.link:visited{
+color: red;
+}
+
+.link:hover{
+color: red;
+font-weight: lighter;
 }

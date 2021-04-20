@@ -13,13 +13,9 @@ export function NewsProvider({children}){
 		 const [news,setNews]= useState([])
 		 const [isloading,setIsloading] = useState(false)
 	
+	
 		  const country = ['United State','Naigeria','Zambia','Australia','Belgium','France','South Africa','Kenya','China','Britain']
 
-		 function checkdata(str,num) {
-		 	if(str.length>20){
-		 		return(str.substring(0,num) + '  read more ...')
-		 	}return str
-		 }
        
    useEffect(()=>{
    	         setIsloading(true)
@@ -28,7 +24,7 @@ export function NewsProvider({children}){
             .then(data => {setNews(data.results)
             	setIsloading(false)}).catch(err=>console.log(err));
 },[])
-const value ={country,isloading,news,checkdata}
+const value ={country,isloading,news}
 
 	return(<NewsContext.Provider value={value}>
 		{children}

@@ -1,26 +1,36 @@
 img{
-	width: 99%;
+	width: 90%;
 	object-fit: contain;
+  
 }
 .continent{
 	background-color:white; 
   flex-wrap: wrap;
+ 
+
 
 }
 .container{
 	padding-bottom: 40px;
 	
 }
+.news-highlite >h3{
+  color: black;
+  font-weight: bold;
+  font:italic;
+  font-size: 30px;
+  overflow: hidden;
+}
 .news-header > h4{
 	color: black;
 	font-weight: bold;
+
 	font:italic;
 	font-size: 17px;
 	overflow: hidden;
 }
 .news-header > h4:hover{
 	cursor: pointer;
-	font-size: 30px;
 	color: red;
 }
 .news-body{
@@ -110,4 +120,26 @@ border-bottom:3px solid;
     box-shadow: 0 -2em;
     height: 5em;
   }
+}
+
+
+
+.handlebtn{
+  outline: none;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+}
+
+
+.link{
+   text-decoration-line: none;
+}
+.link:visited{
+color: red;
+}
+
+.link:hover{
+color: red;
+font-weight: lighter;
 }

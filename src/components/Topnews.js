@@ -3,7 +3,7 @@ import {useState} from 'react'
 
 
 function TopNews(props) {
-	const {title,imgurl,description,country,id} = props
+	const {title,imgurl,description,country,id,url} = props
 	const history = useHistory()
 	const [num,setNum]= useState(80)
 
@@ -27,7 +27,7 @@ function TopNews(props) {
 		<div>
 		<img src={imgurl} alt='no image' />
 		<div className='news-header'>
-		<h4><Link  className='link'onClick={handleclick}>{title} </Link></h4></div>
+		<h4><a href={url} className='link'>{title} </a></h4></div>
 		<div className='news-body'><h3>{checkdata(description,num)}</h3></div>
 
 		</div>

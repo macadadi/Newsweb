@@ -12,8 +12,9 @@ const {country,isloading,news,checkdata}= useNews()
     <div class="container">
   
   <div class="row rowdiv">
-  {!news ? 'loading ' : news.map((t,index)=>t?.image && <Topnews country={country} id={index} 
-  key={index} title={t.title} description={checkdata( t.description,60)} imgurl={t.image}/>)}
+  {console.log(news)}
+  {isloading ? 'loading ' : news.map((t,index)=><Topnews country={t.geo_facet[0] ? t.geo_facet[0] : 'Briefing'} id={index} 
+  key={index} title={t.title} description={checkdata( t.abstract,60)} imgurl={t.multimedia[2].url}/>)}
 
    </div> 
      <div class="row rowdiv">
@@ -27,9 +28,8 @@ const {country,isloading,news,checkdata}= useNews()
 
 
     <div class="row rowdiv">
-  {!news ? 'loading' : news.map((t,index)=>t?.image && <MoreStories country={country} id={index} 
-  key={index} title={t.title} description={checkdata( t.description,60)} imgurl={t.image}/>)}
-
+    ----------------------------------------------------------------------
+ 
 
 
    </div> 
@@ -42,11 +42,9 @@ const {country,isloading,news,checkdata}= useNews()
     </div>
   </div>
 
-
     <div class="row rowdiv">
-  {!news ? 'loading ' : news.map((t,index)=>t?.image && <FeaturedStories country={country} id={index} 
-  key={index} title={t.title} description={checkdata( t.description,60)} imgurl={t.image}/>)}
-
+    -----------------------------------------------------------------------------------
+ 
 
 
    </div> 

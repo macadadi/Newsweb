@@ -3,7 +3,6 @@ import {Link,useHistory} from 'react-router-dom'
 
 function TopNews(props) {
 	const {title,imgurl,description,country,id} = props
-	const rand = Math.floor(Math.random() * 10)
 	const history = useHistory()
 	function handleclick(e) {
 
@@ -12,7 +11,7 @@ function TopNews(props) {
 	}
 
 	return(<div class="col-md-4 continent">
-      <h3>{country[rand]}</h3>
+      <h3>{country}</h3>
 		<div>
 		<img src={imgurl} alt='no image' />
 		<div className='news-header'>

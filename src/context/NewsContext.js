@@ -3,6 +3,7 @@ import useFetch from './useFetch'
 
 
 
+
 const NewsContext = createContext()
 
 export function useNews(){
@@ -11,7 +12,9 @@ export function useNews(){
 
 export function NewsProvider({children}){
 	 const KEY= process.env.REACT_APP_NEWS_KEY
-	const {news,error,isloading} = useFetch(`https://api.nytimes.com/svc/topstories/v2/world.json?api-key=${KEY}`)
+	 const option= ['home','world']
+	const {news,error,isloading} = useFetch(`https://api.nytimes.com/svc/topstories/v2/${option[1]}.json?api-key=${KEY}`)
+	
 		
 
 

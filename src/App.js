@@ -1,6 +1,7 @@
 
 import NavBar from './components/NavBar'
 import Detail from './components/Detail'
+import fake from './components/fake'
 import News from './components/News'
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import {NewsProvider} from './context/NewsContext'

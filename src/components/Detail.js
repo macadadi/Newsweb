@@ -1,11 +1,37 @@
-import {Link,useHistory} from 'react-router-dom'
+import {Link,useHistory,useParams} from 'react-router-dom'
 import {useNews} from '../context/NewsContext'
+import useFetch from  '../context/useFetch'
+import Topnews from './Topnews'
 function Detail(argument) {
-	const {country,isloading,news}= useNews()
-	return(<div>am the detail page
-<br/>
-{console.log(news)}
-<br/>
-		<Link to='/'>Home</Link></div>)
+	const {para} =useParams()
+	const KEY = process.env.REACT_APP_NEWS_KEY
+	 const option= ['home','world']
+	const {news,error,isloading} = useFetch(`https://api.nytimes.com/svc/topstories/v2/${option[0]}.json?api-key=${KEY}`)
+	
+	return(<div>
+
+
+
+		 <div class="container">
+  
+  <div class="row rowdiv">
+
+  {isloading ? <div> <div class="loader">Loading...</div></div>  : news.map((t,index)=><Topnews country={t.geo_facet[0] ? t.geo_facet[0] : 'Briefing'} id={index} 
+  key={index} title={t.title} description={t.abstract} imgurl={t.multimedia[2].url} url={t?.short_url}/>)}
+
+   </div> 
+     <div class="row rowdiv">
+    <div class="col-md-3 news-highlite">
+ <h3> More News </h3>
+    </div>
+    <div className="col-md-9 empty-div">
+    </div>
+  </div>
+ 
+
+
+   
+ 
+</div></div>)
 }
 export default Detail

@@ -12,8 +12,8 @@ const {country,isloading,news,checkdata}= useNews()
     <div class="container">
   
   <div class="row rowdiv">
-  {console.log(news)}
-  {isloading ? 'loading ' : news.map((t,index)=><Topnews country={t.geo_facet[0] ? t.geo_facet[0] : 'Briefing'} id={index} 
+
+  {isloading ?<div> <div class="loader">Loading...</div></div> : news.map((t,index)=><Topnews country={t.geo_facet[0] ? t.geo_facet[0] : 'Briefing'} id={index} 
   key={index} title={t.title} description={t.abstract} imgurl={t.multimedia[2].url} url={t?.short_url}/>)}
 
    </div> 

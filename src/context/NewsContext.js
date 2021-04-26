@@ -10,8 +10,8 @@ export function useNews(){
 }
 
 export function NewsProvider({children}){
-	 const ur="9ec65c43ffa11b5ca709a915a1a05075"
-	const {news,error,isloading} = useFetch(`https://api.nytimes.com/svc/topstories/v2/world.json?api-key=SkrAvDwdsMERKJLJ4enVtSFC3u4vqA48`)
+	 const KEY= process.env.REACT_APP_NEWS_KEY
+	const {news,error,isloading} = useFetch(`https://api.nytimes.com/svc/topstories/v2/world.json?api-key=${KEY}`)
 		
 
 

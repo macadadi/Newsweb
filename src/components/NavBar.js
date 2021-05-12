@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 
 function NavBar(argument) {
 	return(<div >
-    <nav class="navbar navbar-expand-lg  navbar-light bg-light sticky-top py-lg-0">
+    <nav class="navbar navbar-expand-lg  navbar-light bg-light fixed-top py-lg-0">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"> <img src={img1}   alt="News Line"/></a>
     <center> <h1 className='nav-sub'>News Line</h1> </center>

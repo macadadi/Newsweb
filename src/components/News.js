@@ -9,7 +9,7 @@ import {useNews} from '../context/NewsContext'
 function News(argument) {
 const {country,isloading,news,checkdata,error}= useNews()
   return(<div>
-    <div class="container">
+    <div class="container ">
   
   <div class="row rowdiv">
 
@@ -18,18 +18,7 @@ const {country,isloading,news,checkdata,error}= useNews()
   key={index} title={t.title} description={t.abstract} imgurl={t.multimedia[2].url} url={t?.short_url}/>)}
 
    </div> 
-     <div class="row rowdiv">
-    <div class="col-md-3 news-highlite">
- <h3> More News </h3>
-    </div>
-    <div className="col-md-9 empty-div">
-    </div>
-  </div>
- 
-
-
    
- 
 </div>
 </div>)
 }

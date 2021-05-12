@@ -13,6 +13,7 @@ const useFetch =(url) => {
              fetch(url)
             .then(response =>{
               if(!response.ok){
+                setIsloading(false)
                	throw Error('could not fetch data')
                         	}
              return response.json()}

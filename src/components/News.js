@@ -7,13 +7,14 @@ import {useNews} from '../context/NewsContext'
 
 
 function News(argument) {
-const {country,isloading,news,checkdata}= useNews()
+const {country,isloading,news,checkdata,error}= useNews()
   return(<div>
     <div class="container">
   
   <div class="row rowdiv">
 
-  {isloading ?<div> <div class="loader">Loading...</div></div> : news.map((t,index)=><Topnews country={t.geo_facet[0] ? t.geo_facet[0] : 'Briefing'} id={index} 
+  {isloading && !error ? <div> <div class="loader">Loading...</div></div> :error ? <h1> We could not fetch data, 
+  please try refreshing your browser</h1> : news.map((t,index)=><Topnews country={t.geo_facet[0] ? t.geo_facet[0] : 'Briefing'} id={index} 
   key={index} title={t.title} description={t.abstract} imgurl={t.multimedia[2].url} url={t?.short_url}/>)}
 
    </div> 

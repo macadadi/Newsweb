@@ -17,7 +17,7 @@ function App() {
      <Switch>
     
      <Route  exact path='/' component={News} />
-     <Route path ='/detail' component={Detail} />
+     <Route path ='/world' component={Detail} />
      
    
      </Switch>

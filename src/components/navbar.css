@@ -1,10 +1,10 @@
-.Nav-div{
-	height: 25vh;
-	background-color: black;
-	position: sticky;
-	top: -70px;
-	
-	
+
+.navbar-brand{
+  width: 20rem;
+  height:4rem;
+  display: flex;
+  margin-left: 0px;
+  padding: 0px;
 }
 .navbar{
   position: sticky;
@@ -12,8 +12,7 @@
   background: #f83d23;
  
   top: 0px;
-  justify-content: center;
-  align-items: center;
+
   box-shadow: 0 0 6px #000;
   color: #fff;
 
@@ -29,18 +28,19 @@
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
   .nav-sub{
-    font-size: 50px;
-    position: absolute;
-    bottom: 0px;
-    text-align: center;
-    z-index: -1;
-    padding-left: 10px;
-    justify-content: center;
-  align-items: center;
-
-
+    font-size: 60px;
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  .navbar-brand{
+    display: none;
+  }
+}
+
+
+
+
 

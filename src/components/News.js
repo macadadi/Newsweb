@@ -15,7 +15,7 @@ const {country,isloading,news,checkdata,error}= useNews()
 
   {isloading && !error ? <div> <div class="loader">Loading...</div></div> :error ? <h1> We could not fetch data, 
   please try refreshing your browser</h1> : news.map((t,index)=><Topnews country={t.geo_facet[0] ? t.geo_facet[0] : 'Briefing'} id={index} 
-  key={index} title={t.title} description={t.abstract} imgurl={t.multimedia[2].url} url={t?.short_url}/>)}
+  key={index} title={t.title} description={t.abstract} imgurl={t.multimedia != null ? t.multimedia[0].url : '' } url={t?.short_url}/>)}
 
    </div> 
    

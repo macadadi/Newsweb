@@ -25,7 +25,7 @@ function TopNews(props) {
 	return(<div class="col-md-4 continent">
       <h3>{country}</h3>
 		<div>
-		<img src={imgurl} alt='no image' />
+		{imgurl && <img src={imgurl} alt='' />}
 		<div className='news-header'>
 		<h4><a href={url} className='link'>{title} </a></h4></div>
 		<div className='news-body'><h3>{checkdata(description,num)}</h3></div>
